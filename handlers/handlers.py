@@ -141,3 +141,11 @@ async def get_languages(msg: types.Message):
 @router.message(F.text == "BACK🔙")
 async def get_ortga(msg: types.Message):
     await msg.answer(text="you went back", reply_markup=english_buttons)
+
+@router.message(F.text == "Uzbek languages")
+async def get_languages(msg: types.Message):
+    await msg.answer(text="Siz O'zbek tilini tanladingiz!", reply_markup=start_buttons)
+
+@router.message(F.text == "English languages")
+async def get_languages(msg: types.Message):
+    await msg.answer(text="You have chosen English!", reply_markup=english_buttons)
