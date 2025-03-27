@@ -17,12 +17,12 @@ python_junior = KeyboardButton(text="Python Junior")
 frontend_junior = KeyboardButton(text="Frontend Junior")
 robototexnika = KeyboardButton(text="Robototexnika")
 scratch = KeyboardButton(text="Scratch")
-back = KeyboardButton(text="Ortga🔙")
+ortga = KeyboardButton(text="Ortga🔙")
 kurslarimiz = ReplyKeyboardMarkup(
     keyboard=[
         [python_junior, frontend_junior],
         [robototexnika, scratch],
-        [back]
+        [ortga]
     ]
 )
 Uzb = KeyboardButton(text="Uzbek tili")
@@ -46,4 +46,25 @@ english_buttons = ReplyKeyboardMarkup(
         [Our_courses],
         [Contact_address, Languages]
     ],resize_keyboard=True
+)
+python_junior = KeyboardButton(text="Python junior")
+frontend_junior = KeyboardButton(text="Frontend junior")
+robotics = KeyboardButton(text="Robotics")
+scratch = KeyboardButton(text="Scratch!")
+back = KeyboardButton(text="Back🔙")
+courses = ReplyKeyboardMarkup(
+    keyboard=[
+        [python_junior, frontend_junior],
+        [robotics, scratch],
+        [back]
+    ]
+)
+Uzb = KeyboardButton(text="Uzbek language")
+Eng = KeyboardButton(text="English language")
+voltar = KeyboardButton(text="BACK🔙")
+languages = ReplyKeyboardMarkup(
+    keyboard=[
+        [Uzb, Eng],
+        [voltar]
+    ], resize_keyboard=True
 )
