@@ -9,7 +9,12 @@ from bot_menu import set_bot_menu
 from handlers.commands import router as commands_router
 from handlers.handlers import router as router
 
+from aiogram.client.session.aiohttp import AiohttpSession
+
 load_dotenv()
+
+session = AiohttpSession(proxy="http://proxy.server:3128")
+
 TOKEN = getenv("BOT_TOKEN")
 
 
@@ -19,7 +24,8 @@ dp.include_router(router)
 
 
 async def main() -> None:
-    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    # bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(token=TOKEN, session=session)
     await set_bot_menu(bot)
     await dp.start_polling(bot)
 
